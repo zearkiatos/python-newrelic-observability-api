@@ -4,7 +4,12 @@ FROM python:slim-buster
 # Copy repository to base image and publish your application
 WORKDIR /app
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt update
+RUN apt-get install make
+RUN pip install --upgrade pip setuptools
+RUN pip install --upgrade pip
+RUN pip install wheel
+RUN make install
 
 EXPOSE 5000
 
