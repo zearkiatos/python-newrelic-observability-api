@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "fd18f001-5df5-488d-a4ca-02da3259f882",
+		"name": "python-newrelic-observability-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1347256"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PYTHON_NEWRELIC_OBSERVABILITY_BASE_URL}}/ping",
+					"host": [
+						"{{PYTHON_NEWRELIC_OBSERVABILITY_BASE_URL}}"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PYTHON_NEWRELIC_OBSERVABILITY_BASE_URL}}/convertC/123",
+					"host": [
+						"{{PYTHON_NEWRELIC_OBSERVABILITY_BASE_URL}}"
+					],
+					"path": [
+						"convertC",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
