@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python-newrelic-observability-api
+    restart: always
+    volumes:
+      - ".:/app"
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    tty: true
+    networks:
+      - api_net
+networks:
+  api_net:
+    name: api_net
+    driver: bridge
